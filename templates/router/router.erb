@@ -71,6 +71,9 @@
 <% unless @route_list.nil? -%>
   route_list   = <%= @route_list %>
 <% end -%>
+<% unless @require_files.nil? -%>
+  require_files = <%= @require_files %>
+<% end -%>
 <% unless @host_find_failed.nil? -%>
   host_find_failed = <%= @host_find_failed %>
 <% end -%>

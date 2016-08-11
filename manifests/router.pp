@@ -98,6 +98,9 @@
 # [*route_list*]
 #  Target server used by manualroute router.
 #
+# [*require_files*]
+#  Files required by this router.
+#
 # [*same_domain_copy_routing*]
 #  This option copys routing information to all mails targeting the same domain.
 #
@@ -149,6 +152,7 @@ define exim::router (
   $qualify_preserve_domain    = false,
   $route_data                 = undef,
   $route_list                 = undef,
+  $require_files              = undef,
   $same_domain_copy_routing   = undef,
   $self                       = undef,
   $senders                    = undef,
