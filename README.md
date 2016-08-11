@@ -37,11 +37,11 @@ Create a new, acl list named "acl_check_rcpt" :
       'Accept local' => {
         action     => 'accept',
         conditions => [ ['hosts',[':']] ],
-      }
+      },
       'Accept hostlist' => {
         action     => 'accept',
         conditions => [ ['hosts'   , ['@','127.0.0.1']], ]
-      }
+      },
       'deny all' => {
         action     => 'deny',
         conditions => [ ['message' , ['relay not permitted']], ]
