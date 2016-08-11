@@ -8,7 +8,7 @@ into a nice, easy to read, single configuration file.
 
 ## Usage
 
-In the simpliest form, you can just include the exim class:
+In the simplest form, just include the exim class:
 
 ```puppet
   include exim
@@ -22,7 +22,7 @@ Here is an example replicating the default config:
 
 Load the main class.
 Disable the default config.
-Set the acl used for rcpt checking to "acl_check_rcpt" (default, shown for demonstation)
+Set the acl used for rcpt checking to "acl_check_rcpt" (default, shown for demonstration)
 ```puppet
   class {'exim':
     defaults       => false,
