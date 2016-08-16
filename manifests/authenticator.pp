@@ -31,8 +31,8 @@
 define exim::authenticator (
   $driver,
   $public_name,
-  $server_condition,
-  $server_set_id,
+  $server_condition = undef,
+  $server_set_id = undef,
   $server_prompts = undef,
   $client_ignore_invalid_base64 = false,
   $client_send    = undef,
