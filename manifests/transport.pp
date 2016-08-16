@@ -43,6 +43,9 @@
 #   specified by hosts are also used, whether or not the address has its
 #   own hosts, if hosts_override is set.
 #
+# [*hosts_require_auth*]
+#   List of hosts that need to be authenticated before messages are accepted.
+#
 # [*hosts_require_tls*]
 #   List of hosts requiring tls, messages are only sent if tls can be established.
 #
@@ -97,6 +100,7 @@ define exim::transport (
   $headers_remove          = undef,
   $helo_data               = undef,
   $home_directory          = undef,
+  $hosts_require_auth      = undef,
   $hosts_require_tls       = undef,
   $exim_environment        = undef,
   $hosts                   = undef,
@@ -155,6 +159,7 @@ define exim::transport (
   if ($headers_add)      { validate_array($headers_add   ) }
   if ($fallback_hosts)   { validate_array($fallback_hosts) }
   if ($exim_environment) { validate_array($exim_environment)}
+  if ($hosts_require_auth){ validate_array($hosts_require_auth)}
   if ($hosts_require_tls){ validate_array($hosts_require_tls)}
 
   if ($batch_max)               { validate_re("x${batch_max}"               ,'^x[0-9]+$') }
