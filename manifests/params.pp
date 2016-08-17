@@ -38,6 +38,7 @@ class exim::params {
   $log_lost_incoming_connection       = true
   $log_tls_peerdn                     = true
   $log_skip_delivery                  = true
+  $log_subject                        = true
   $log_retry_defer                    = true
   $local_interfaces                   = undef
   $macros                             = {}

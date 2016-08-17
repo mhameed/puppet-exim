@@ -41,6 +41,7 @@ class exim::config {
   $log_smtp_connection                =$::exim::log_smtp_connection
   $log_smtp_protocol_error            =$::exim::log_smtp_protocol_error
   $log_smtp_syntax_error              =$::exim::log_smtp_syntax_error
+  $log_subject                        =$::exim::log_subject
   $log_tls_peerdn                     =$::exim::log_tls_peerdn
   $macros                             =$::exim::macros
   $manage_service                     =$::exim::manage_service

@@ -162,6 +162,9 @@
 # [*log_smtp_syntax_error*]
 #   Log SMTP syntax errors.
 #
+# [*log_subject*]
+#   Log email subject lines.
+#
 # [*log_tls_peerdn*]
 #   TLS peer DN on <= and => lines
 #
@@ -312,6 +315,7 @@ class exim (
   $log_smtp_connection                =$::exim::params::log_smtp_connection,
   $log_smtp_protocol_error            =$::exim::params::log_smtp_protocol_error,
   $log_smtp_syntax_error              =$::exim::params::log_smtp_syntax_error,
+  $log_subject                        =$::exim::params::log_subject,
   $log_tls_peerdn                     =$::exim::params::log_tls_peerdn,
   $macros                             =$::exim::params::macros,
   $manage_service                     =$::exim::params::manage_service,
